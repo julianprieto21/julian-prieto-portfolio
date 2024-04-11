@@ -1,18 +1,37 @@
 ---
 import LinkedInLogo from "@/icons/LinkedInLogo.astro";
 import GithubLogo from "@/icons/GithubLogo.astro";
+import GmailLogo from "./icons/GmailLogo.astro";
+
+const links = [
+  { name: "Gmail", href: "mailto:prietojulian2003@gmail.com", logo: GmailLogo },
+  {
+    name: "LinkedIn",
+    href: "https://www.linkedin.com/in/julian-prieto-809397253/",
+    logo: LinkedInLogo,
+  },
+  {
+    name: "Github",
+    href: "https://github.com/julianprieto21",
+    logo: GithubLogo,
+  },
+];
 ---
 
 <li class="flex flex-row mt-14 gap-8">
-  <ul>
-    <a href="#" target="_blank" rel="noopener noreferrer">
-      <LinkedInLogo class="size-16 text-primary hover:scale-110 transition" />
-    </a>
-  </ul>
-  <ul>
-    <a href="#" target="_blank" rel="noopener noreferrer">
-      <GithubLogo class="size-16 text-primary hover:scale-110 transition" />
-    </a>
-  </ul>
-  <ul></ul>
+  {
+    links.map((link) => {
+      const Logo = link.logo;
+      return (
+        <ul class="relative flex flex-col items-center group">
+          <a href={link.href} target="_blank" rel="noopener noreferrer">
+            <Logo class="size-20 text-primary group-hover:scale-110 transition" />
+          </a>
+          <span class="font-semibold absolute opacity-0 -bottom-5 transition group-hover:opacity-100 delay-100">
+            {link.name}
+          </span>
+        </ul>
+      );
+    })
+  }
 </li>
