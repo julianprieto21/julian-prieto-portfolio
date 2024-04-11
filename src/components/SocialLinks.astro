@@ -24,7 +24,12 @@ const links = [
       const Logo = link.logo;
       return (
         <ul class="relative flex flex-col items-center group">
-          <a href={link.href} target="_blank" rel="noopener noreferrer">
+          <a
+            href={link.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={"Link to" + link.name}
+          >
             <Logo class="size-20 text-primary group-hover:scale-110 transition" />
           </a>
           <span class="font-semibold absolute opacity-0 -bottom-5 transition group-hover:opacity-100 delay-100">
