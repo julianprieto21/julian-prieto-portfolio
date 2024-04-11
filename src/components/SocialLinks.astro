@@ -18,12 +18,12 @@ const links = [
 ];
 ---
 
-<li class="flex flex-row mt-14 gap-8">
+<ul class="flex flex-row mt-14 gap-8">
   {
     links.map((link) => {
       const Logo = link.logo;
       return (
-        <ul class="relative flex flex-col items-center group">
+        <li class="relative flex flex-col items-center group">
           <a
             href={link.href}
             target="_blank"
@@ -32,11 +32,11 @@ const links = [
           >
             <Logo class="size-20 text-primary group-hover:scale-110 transition" />
           </a>
-          <span class="font-semibold absolute opacity-0 -bottom-5 transition group-hover:opacity-100 delay-100">
+          <span class="font-semibold absolute opacity-0 bottom-0 group-hover:-bottom-5 transition-all group-hover:opacity-100 delay-100">
             {link.name}
           </span>
-        </ul>
+        </li>
       );
     })
   }
-</li>
+</ul>
