@@ -10,14 +10,21 @@ const { title } = Astro.props;
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
+    <meta name="description" content="" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body>
+  <body class="mx-auto max-w-7xl mt-20 border-x px-16">
     <slot />
   </body>
 </html>
-<style is:global></style>
+<style is:global>
+  :root {
+    color-scheme: light dark;
+  }
+  html {
+    @apply text-primary;
+  }
+</style>
