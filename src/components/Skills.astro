@@ -1,0 +1,28 @@
+---
+const skills = [
+  { name: "Python", items: ["Pandas", "Numpy", "Scikit-Learn", "MatPlotLib"] },
+  { name: "Desarrollo Web", items: "Javascript | HTML | CSS | + Frameworks" },
+  { name: "SAP", items: "BW4HANA | SAC | ERP" },
+  { name: "SQL" },
+  { name: "Estadística" },
+  { name: "Pensamiento Lógico" },
+];
+---
+
+<section class="mt-32 flex flex-col items-end">
+  <h1 class="font-bold text-5xl uppercase">Habilidades 🛠️</h1>
+  <ul class="w-1/2 pt-5 px-3 list-none list-inside">
+    {
+      skills.map((skill) => {
+        return (
+          <li class="font-bold text-2xl mb-2">
+            .{skill.name}
+            <spa class="pl-1 text-secondary font-light text-xs">
+              {skill.items}
+            </spa>
+          </li>
+        );
+      })
+    }
+  </ul>
+</section>
