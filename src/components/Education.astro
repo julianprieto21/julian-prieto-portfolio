@@ -1,9 +1,9 @@
 ---
 const history = [
   {
-    name: "Lic. en Ciencia de Datos",
-    place: "Universidad Nacional Guillermo Brown",
-    start: 2021,
+    name: "Licenciatura en Ciencia de Datos",
+    place: "Universidad Nac. Guillermo Brown",
+    start: "2021",
     finish: null,
     progress: 0.7667,
   },
@@ -14,26 +14,26 @@ const history = [
   <h1 class="font-bold
   text-5xl
   uppercase">Educación 📓</h1>
-  <ul class="w-3/4 pt-5 px-3 list-none list-inside">
+  <ul class="w-3/5 pt-5 px-3 list-none list-inside">
     {
       history.map((item, index) => {
         return (
-          <>
-            <li class="flex flex-row items-center justify-start">
-              <span class="w-4 h-4 rounded-full bg-primary mr-4" />
-              <main>
-                <h2 class="text-2xl font-medium">
-                  {item.start} - {item.finish ? item.finish : "Actualidad"}
-                </h2>
-                <h3 class="font-bold text-secondary text-lg">
-                  {item.name} | {item.place}
-                </h3>
-              </main>
-            </li>
-            {history[index + 1] ? (
-              <div class="border-l border-dashed border-primary h-8 ml-[7px]" />
-            ) : null}
-          </>
+          <li class="flex flex-col border-b border-secondary pb-0.5">
+            <a
+              href="https://www.unab.edu.ar/lic-ciencia-datos/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <h2 class="text-2xl font-semibold hover:underline">
+                .{item.name}
+              </h2>
+            </a>
+            <h3 class="font-bold text-secondary text-lg pl-3">
+              {item.start} - {item.finish ? item.finish : "Actualidad"}
+              <span class="text-primary px-1">/</span>
+              {item.place}
+            </h3>
+          </li>
         );
       })
     }
