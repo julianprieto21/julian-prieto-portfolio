@@ -7,12 +7,12 @@ const history = [
     trajectory: [
       {
         position: "BI Analyst",
-        start: "Junio 2023",
-        finish: "Septiembre 2023",
+        start: "06.2023",
+        finish: "09.2023",
       },
       {
         position: "Analyst Consultant",
-        start: "Septiembre 2023",
+        start: "09.2023",
         finish: null,
       },
     ],
@@ -24,17 +24,10 @@ const history = [
   <h1 class="font-bold
   text-5xl
   uppercase">Experiencia Laboral 🧑‍💼</h1>
-  <ul class="w-3/5 pt-5 px-3 list-none list-inside">
+  <ul class="w-3/5 pt-5 px-3 list-none list-inside flex flex-col gap-4">
     {
       history.map((item, index) => {
-        return (
-          <>
-            <ExperienceItem item={item} client:visible />
-            {history[index + 1] ? (
-              <div class="border-l border-dashed border-primary h-8 ml-[7px]" />
-            ) : null}
-          </>
-        );
+        return <ExperienceItem item={item} index={index} client:visible />;
       })
     }
   </ul>
