@@ -1,12 +1,9 @@
 ---
-import ArrowSeparateVertical from "@/icons/ArrowSeparateVertical.astro";
+import ExperienceItem from "./ExperienceItem";
 
 const history = [
   {
-    actualPosition: "Analyst Consultant",
     place: "Seidor Analytics",
-    start: "Junio 2023",
-    finish: null,
     trajectory: [
       {
         position: "BI Analyst",
@@ -32,21 +29,7 @@ const history = [
       history.map((item, index) => {
         return (
           <>
-            <li class="flex flex-row items-center justify-start relative">
-              <div class="hidden absolute peer-hover:h-10 h-0 w-full bg-secondary z-20 border" />
-              <span class="w-4 h-4 rounded-full bg-primary mr-4" />
-              <main>
-                <h2 class="text-2xl font-medium">
-                  {item.start} - {item.finish ? item.finish : "Actualidad"}
-                </h2>
-                <h3 class="font-bold text-secondary text-lg">
-                  {item.actualPosition} | {item.place}
-                </h3>
-              </main>
-              <button type="button" class="absolute right-0 group peer">
-                <ArrowSeparateVertical class:list="size-10 text-secondary/20 group-hover:text-primary transition" />
-              </button>
-            </li>
+            <ExperienceItem item={item} client:visible />
             {history[index + 1] ? (
               <div class="border-l border-dashed border-primary h-8 ml-[7px]" />
             ) : null}
