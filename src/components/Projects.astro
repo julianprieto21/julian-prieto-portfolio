@@ -14,7 +14,7 @@ const proyects = [
     name: "Chess Game",
     language: "Python",
     description:
-      "Juego de ajedrez totalmente funcionable con la posiblidad de jugar contra una IA básica o 1v1 en la misma máquina.",
+      "Juego de ajedrez totalmente funcionable con la posiblidad de jugar contra un IA básica o 1v1 en la misma máquina.",
     tools: ["Pygame", "Numpy", "Multiprocessing"],
     href: "https://github.com/julianprieto21/Python-Chess",
   },
@@ -59,8 +59,8 @@ const proyects = [
 ];
 ---
 
-<section class="flex flex-col mt-32 items-start">
-  <h1 class="font-bold text-5xl uppercase">Proyectos ⭐</h1>
+<section class="items-start">
+  <h1 class="title">Proyectos ⭐</h1>
   <ul class="w-3/5 pt-5 px-3 list-none list-inside-">
     {proyects.map((project) => <Project project={project} client:visible />)}
   </ul>
