@@ -95,7 +95,7 @@ export default function Experience({ item, index }: Props) {
   const last = item.trajectory[trajectoryLength - 1];
 
   return (
-    <li key={index} className="border-b border-secondary pb-0.5">
+    <li key={index} className="border-b border-secondary pb-0.5 mb-5">
       <div className="flex flex-row items-center justify-start relative">
         <main>
           <a
