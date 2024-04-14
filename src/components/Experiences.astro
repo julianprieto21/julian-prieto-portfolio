@@ -1,9 +1,11 @@
 ---
-import ExperienceItem from "./ExperienceItem";
+import Experience from "./Experience";
 
 const history = [
   {
     place: "Seidor Analytics",
+    comment:
+      "Fue mi primer experiencia laboral en el área, donde se me permitió desarrollar diversas aptitudes. Pude conocer y aprender herramientas tales como SAP ERP, SAP BW4/HANA y SAC. Además de entrenar mis habilidades blandas como el trabajo en equipo o el trato hacia el cliente",
     trajectory: [
       {
         position: "BI Analyst",
@@ -25,7 +27,7 @@ const history = [
   <ul class="w-3/5 pt-5 px-3 list-none list-inside flex flex-col gap-4">
     {
       history.map((item, index) => (
-        <ExperienceItem item={item} index={index} client:visible />
+        <Experience item={item} index={index} client:visible />
       ))
     }
   </ul>

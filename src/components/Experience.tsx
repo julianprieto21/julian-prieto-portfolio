@@ -3,6 +3,7 @@ import { useState, type SVGProps } from "react";
 interface Props {
   item: {
     place: string;
+    comment: string;
     trajectory: { position: string; start: string; finish: string | null }[];
   };
   index: number;
@@ -52,6 +53,7 @@ function ArrowUnionVertical(props: SVGProps<SVGSVGElement>) {
 
 function TimeLine(props: {
   trajectory: { position: string; start: string; finish: string | null }[];
+  comment: string;
   open: boolean;
 }) {
   const open = props.open;
@@ -59,29 +61,34 @@ function TimeLine(props: {
 
   return (
     <div
-      style={{ height: open ? 40 * trajectoryLength : 0 }}
+      style={{ height: open ? 40 * trajectoryLength + 90 : 0 }}
       className={`${
         open ? "opacity-100 my-2" : "opacity-0"
-      } w-full transition-all duration-300 flex flex-row overflow-auto relative ml-3`}
+      } w-full transition-all duration-300 overflow-hidden ml-3`}
     >
-      <span className="border-l border-dashed border-primary absolute h-full left-[77px]"></span>
-      <ul className="w-full flex flex-col justify-between">
-        {props.trajectory.map((trajectory, index) => (
-          <li
-            key={index}
-            className="flex flex-row justify-start gap-2 items-center text-secondary"
-          >
-            <span>{trajectory.start}</span>
-            <span className="w-3 h-3 rounded-full bg-primary" />
-            <span className="font-bold text-lg">{trajectory.position}</span>
-          </li>
-        ))}
-      </ul>
+      <p className="font-semibold text-secondary text-sm w-5/6 h-[90px] animation">
+        {props.comment}
+      </p>
+      <div className="flex flex-row relative">
+        <span className="border-l border-dashed border-primary absolute h-full left-[77px]"></span>
+        <ul className="w-full flex flex-col justify-between h-full">
+          {props.trajectory.map((trajectory, index) => (
+            <li
+              key={index}
+              className="flex flex-row justify-start gap-2 items-center text-secondary h-[40px]"
+            >
+              <span>{trajectory.start}</span>
+              <span className="w-3 h-3 rounded-full bg-primary" />
+              <span className="font-bold text-lg">{trajectory.position}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 }
 
-export default function ExperienceItem({ item, index }: Props) {
+export default function Experience({ item, index }: Props) {
   const [open, setOpen] = useState(false);
   const trajectoryLength = item.trajectory.length;
   const first = item.trajectory[0];
@@ -125,7 +132,11 @@ export default function ExperienceItem({ item, index }: Props) {
           )}
         </button>
       </div>
-      <TimeLine trajectory={item.trajectory} open={open} />
+      <TimeLine
+        trajectory={item.trajectory}
+        comment={item.comment}
+        open={open}
+      />
     </li>
   );
 }
