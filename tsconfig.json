@@ -1,13 +1,13 @@
 {
   "extends": "astro/tsconfigs/strict",
   "compilerOptions": {
-    "baseUrl": "C:/Users/julip/Coding/Web Projects/portfolio",
+    "baseUrl": ".",
     "paths": {
       "@/*": [
-        "./src/*"
+        "src/*"
       ],
       "@/icons/*": [
-        "./src/components/icons/*"
+        "src/components/icons/*"
       ]
     },
     "jsx": "react-jsx",
