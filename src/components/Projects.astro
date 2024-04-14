@@ -1,0 +1,67 @@
+---
+import Project from "./Project";
+
+const proyects = [
+  {
+    name: "Sudoku Solver",
+    language: "Python",
+    description:
+      "Programa para resolver sudokus a partir de imágenes, utilizando algoritmos de retroceso (backtracking).",
+    tools: ["TensorFlow", "Keras", "Numpy", "Pandas"],
+    href: "https://github.com/julianprieto21/Sudoku-Solver",
+  },
+  {
+    name: "Chess Game",
+    language: "Python",
+    description:
+      "Juego de ajedrez totalmente funcionable con la posiblidad de jugar contra una IA básica o 1v1 en la misma máquina.",
+    tools: ["Pygame", "Numpy", "Multiprocessing"],
+    href: "https://github.com/julianprieto21/Python-Chess",
+  },
+  {
+    name: "Housing EDA",
+    language: "Python",
+    description:
+      "Análisis exploratorio de datos de viviendas en el Gran Buenos Aires (GBA), Argentina. Datos recolectados de mercadolibre.com.ar utilizando técnicas de scraping.",
+    tools: [
+      "Pandas",
+      "MatPlotLib",
+      "Seaborn",
+      "Beautiful Soup",
+      "Requests",
+      "Scikit-Learn",
+    ],
+    href: "https://github.com/julianprieto21/GBA_Houses_EDA",
+  },
+  {
+    name: "Smoke Detection Classification",
+    language: "Python",
+    description:
+      "Utilización y analisis de diversos modelos de clasificación binaria supervisados y no supervisados para predecir incendios a partir de las lecturas de un detector de humo.",
+    tools: ["Scikit-Learn", "Pandas", "Numpy", "MatPlotLib", "Seaborn"],
+    href: "https://github.com/julianprieto21/Smoke-Detection-Classification",
+  },
+  {
+    name: "Pokeball",
+    language: "Typescript",
+    description: "Juego clon de Pokemon basado en Pokemon: Rojo Fuego.",
+    tools: ["React", "TailwindCSS", "Gsap"],
+    href: "https://github.com/julianprieto21/Pokeball-REACT-",
+  },
+  {
+    name: "WalleTRX",
+    language: "Typescript",
+    description:
+      "Aplicación web para llevar un registro de las finanzas personales. Con la posibilidad de analizar los movimientos y reconocer patrones de gastos propios.",
+    tools: ["NextJS", "TailwindCSS", "PostgressDB", "Next-Auth", "Recharts"],
+    href: "https://github.com/julianprieto21/walletrx-app",
+  },
+];
+---
+
+<section class="flex flex-col mt-32 items-start">
+  <h1 class="font-bold text-5xl uppercase">Proyectos ⭐</h1>
+  <ul class="w-3/5 pt-5 px-3 list-none list-inside-">
+    {proyects.map((project) => <Project project={project} client:visible />)}
+  </ul>
+</section>
