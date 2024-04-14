@@ -16,26 +16,22 @@ const history = [
   uppercase">Educación 📓</h1>
   <ul class="w-3/5 pt-5 px-3 list-none list-inside">
     {
-      history.map((item, index) => {
-        return (
-          <li class="flex flex-col border-b border-secondary pb-0.5">
-            <a
-              href="https://www.unab.edu.ar/lic-ciencia-datos/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <h2 class="text-2xl font-semibold hover:underline">
-                .{item.name}
-              </h2>
-            </a>
-            <h3 class="font-bold text-secondary text-lg pl-3">
-              {item.start} - {item.finish ? item.finish : "Actualidad"}
-              <span class="text-primary px-1">/</span>
-              {item.place}
-            </h3>
-          </li>
-        );
-      })
+      history.map((item, index) => (
+        <li class="flex flex-col border-b border-secondary pb-0.5">
+          <a
+            href="https://www.unab.edu.ar/lic-ciencia-datos/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <h2 class="text-2xl font-semibold hover:underline">.{item.name}</h2>
+          </a>
+          <h3 class="font-bold text-secondary text-lg pl-3">
+            {item.start} - {item.finish ? item.finish : "Actualidad"}
+            <span class="text-primary px-1">/</span>
+            {item.place}
+          </h3>
+        </li>
+      ))
     }
   </ul>
 </section>

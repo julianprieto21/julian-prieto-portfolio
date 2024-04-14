@@ -65,7 +65,7 @@ function TimeLine(props: {
       } w-full transition-all duration-300 flex flex-row overflow-auto relative ml-3`}
     >
       <span className="border-l border-dashed border-primary absolute h-full left-[77px]"></span>
-      <ul className="w-full flex flex-col justify-around">
+      <ul className="w-full flex flex-col justify-between">
         {props.trajectory.map((trajectory, index) => (
           <li
             key={index}
