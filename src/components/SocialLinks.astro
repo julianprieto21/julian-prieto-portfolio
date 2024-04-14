@@ -2,6 +2,7 @@
 import LinkedInLogo from "./icons/LinkedInLogo.astro";
 import GithubLogo from "./icons/GithubLogo.astro";
 import GmailLogo from "./icons/GmailLogo.astro";
+import InfoLogo from "./icons/InfoLogo.astro";
 
 const links = [
   { name: "Gmail", href: "mailto:prietojulian2003@gmail.com", logo: GmailLogo },
@@ -14,6 +15,11 @@ const links = [
     name: "Github",
     href: "https://github.com/julianprieto21",
     logo: GithubLogo,
+  },
+  {
+    name: "CV",
+    href: "curriculum.pdf",
+    logo: InfoLogo,
   },
 ];
 ---
@@ -30,7 +36,7 @@ const links = [
             rel="noopener noreferrer"
             aria-label={"Link to" + link.name}
           >
-            <Logo class="size-20 text-primary group-hover:scale-110 transition" />
+            <Logo class="size-16 text-primary group-hover:scale-110 transition" />
           </a>
           <span class="font-semibold absolute opacity-0 bottom-0 group-hover:-bottom-5 transition-all group-hover:opacity-100 delay-100">
             {link.name}
