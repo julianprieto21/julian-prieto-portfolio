@@ -4,10 +4,10 @@
     "baseUrl": "C:/Users/julip/Coding/Web Projects/portfolio",
     "paths": {
       "@/*": [
-        "src/*"
+        "./src/*"
       ],
       "@/icons/*": [
-        "src/components/icons/*"
+        "./src/components/icons/*"
       ]
     },
     "jsx": "react-jsx",
