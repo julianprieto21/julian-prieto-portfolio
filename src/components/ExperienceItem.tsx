@@ -97,8 +97,8 @@ export default function ExperienceItem({ item, index }: Props) {
             rel="noopener noreferrer"
           >
             <h2
-              className={`text-2xl font-semibold transition duration-300 hover:underline ${
-                open ? "translate-y-5" : "translate-y-0"
+              className={`font-semibold transition-all duration-300 hover:underline ${
+                open ? "translate-y-5 text-3xl" : "translate-y-0 text-2xl"
               }`}
             >
               .{item.place}
@@ -119,45 +119,13 @@ export default function ExperienceItem({ item, index }: Props) {
           onClick={() => setOpen(!open)}
         >
           {open ? (
-            <ArrowUnionVertical className="size-10 text-secondary/20 group-hover:text-primary transition" />
+            <ArrowUnionVertical className="size-10 text-secondary/40 group-hover:text-primary transition" />
           ) : (
-            <ArrowSeparateVertical className="size-10 text-secondary/20 group-hover:text-primary transition" />
+            <ArrowSeparateVertical className="size-10 text-secondary/40 group-hover:text-primary transition" />
           )}
         </button>
       </div>
       <TimeLine trajectory={item.trajectory} open={open} />
-
-      {/* <ul
-        className={`${
-          open ? "opacity-100" : "opacity-0"
-        } w-full transition-all flex flex-col justify-end delay-100 overflow-auto`}
-      >
-        {item.trajectory
-          .slice(0, trajectoryLength - 1)
-          .map((trajectory, index) => (
-            <li
-              key={index}
-              className={`flex flex-col justify-center items-start transition-all delay-100  ${
-                open ? "h-[92px]" : "h-0"
-              }`}
-            >
-              <main className="flex flex-row items-center border-r border-secondary/10 w-full">
-                <span className="w-4 h-4 rounded-full bg-primary mr-4" />
-                <section>
-                  <h2 className="text-2xl font-medium">
-                    {trajectory.start} - {trajectory.finish}
-                  </h2>
-                  <h3 className="font-bold text-secondary text-lg">
-                    {trajectory.position} | {item.place}
-                  </h3>
-                </section>
-              </main>
-              {item.trajectory[index + 1] ? (
-                <span className="border-l border-dashed border-primary h-8 ml-[7px]" />
-              ) : null}
-            </li>
-          ))}
-      </ul> */}
     </li>
   );
 }

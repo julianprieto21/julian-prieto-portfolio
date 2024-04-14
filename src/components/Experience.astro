@@ -26,9 +26,9 @@ const history = [
   uppercase">Experiencia Laboral 🧑‍💼</h1>
   <ul class="w-3/5 pt-5 px-3 list-none list-inside flex flex-col gap-4">
     {
-      history.map((item, index) => {
-        return <ExperienceItem item={item} index={index} client:visible />;
-      })
+      history.map((item, index) => (
+        <ExperienceItem item={item} index={index} client:visible />
+      ))
     }
   </ul>
 </section>
