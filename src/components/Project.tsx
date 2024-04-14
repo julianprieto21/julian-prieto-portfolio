@@ -42,9 +42,16 @@ export default function Project({ project }: Props) {
         }`}
       >
         <span className="font-bold text-secondary">{project.language}</span>
-        <span className="font-extralight text-primary text-sm">
-          {project.tools.join(" | ")}
-        </span>
+        <div className="pt-1 font-extralight text-primary/90 text-sm flex flex-row gap-2">
+          {project.tools.map((tool, index) => (
+            <span
+              className="bg-secondary/20 rounded-full px-2 py-0.5"
+              key={index}
+            >
+              {tool}
+            </span>
+          ))}
+        </div>
       </div>
 
       <p className="text-lg font-bold text-secondary pl-3">
