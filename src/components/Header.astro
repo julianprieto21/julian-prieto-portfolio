@@ -2,14 +2,29 @@
 import SocialLinks from "@/components/SocialLinks.astro";
 ---
 
-<header class="w-full flex items-center justify-start gap-14">
-  <img src="/profile.webp" alt="Foto de perfil" class="rounded-full size-80" />
-  <div class="flex flex-col justify-start h-full">
-    <h1 class="text-8xl font-semibold mt-14">Julian Prieto</h1>
-    <h2 class="text-2xl font-medium text-secondary">
+<header
+  class="w-full flex items-center justify-center sm:justify-start sm:gap-14"
+>
+  <img
+    src="/profile.webp"
+    alt="Foto de perfil"
+    class="rounded-full size-40 sm:size-80"
+  />
+  <div
+    class="flex flex-col items-center sm:justify-start sm:items-start h-full"
+  >
+    <h1
+      class="text-5xl text-center sm:text-left sm:text-8xl font-semibold sm:mt-14"
+    >
+      Julian Prieto
+    </h1>
+    <h2
+      class="text-sm sm:text-2xl text-center sm:text-left w-3/4 sm:w-full font-medium text-secondary"
+    >
       Estudiante de Lic. en Ciencia de Datos
     </h2>
 
-    <SocialLinks />
+    <div class="hidden sm:block"><SocialLinks /></div>
   </div>
 </header>
+<div class="block sm:hidden"><SocialLinks /></div>

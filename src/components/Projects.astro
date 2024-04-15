@@ -59,9 +59,9 @@ const proyects = [
 ];
 ---
 
-<section class="items-start">
+<section class="items-center sm:items-start">
   <h1 class="title">Proyectos ⭐</h1>
-  <ul class="w-3/5 pt-5 px-3 list-none list-inside-">
+  <ul class="w-full sm:w-3/5 pt-5 px-3 list-none list-inside-">
     {proyects.map((project) => <Project project={project} client:visible />)}
   </ul>
 </section>

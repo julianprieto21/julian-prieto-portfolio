@@ -12,16 +12,16 @@ const skills = [
 ];
 ---
 
-<section class="items-end">
+<section class="items-center sm:items-end">
   <h1 class="title">Habilidades 🛠️</h1>
-  <ul class="w-1/2 pt-5 px-3 list-none list-inside">
+  <ul class="w-full sm:w-1/2 pt-5 sm:px-3 list-none list-inside">
     {
       skills.map((skill) => (
-        <li class="font-semibold text-2xl mb-2">
+        <li class="font-semibold text-xl sm:text-2xl mb-2 flex sm:items-end items-start sm:flex-row flex-col">
           .{skill.name}
-          <spa class="pl-1 text-secondary font-light text-xs">
+          <span class="pl-1 text-secondary font-light text-xs">
             {skill.items?.join(" | ")}
-          </spa>
+          </span>
         </li>
       ))
     }

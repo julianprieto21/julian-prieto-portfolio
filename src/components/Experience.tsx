@@ -61,12 +61,12 @@ function TimeLine(props: {
 
   return (
     <div
-      style={{ height: open ? 40 * trajectoryLength + 90 : 0 }}
+      // style={{ height: open ? 40 * trajectoryLength + 90 : 0 }}
       className={`${
-        open ? "opacity-100 my-2" : "opacity-0"
-      } w-full transition-all duration-300 overflow-hidden ml-3`}
+        open ? "opacity-100 h-auto sm:h-48" : "opacity-0 h-0"
+      } w-full transition-all duration-300 overflow-hidden ml-3 my-2 sm:mb-0`}
     >
-      <p className="font-semibold text-secondary text-sm w-5/6 h-[90px] animation">
+      <p className="font-semibold text-secondary text-sm w-5/6 animation pb-4">
         {props.comment}
       </p>
       <div className="flex flex-row relative">
