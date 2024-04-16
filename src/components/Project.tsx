@@ -38,7 +38,7 @@ export default function Project({ project }: Props) {
       </div>
       <div
         className={`pl-3 overflow-hidden animation duration-300 flex flex-col ${
-          open ? "h-auto sm:h-16 opacity-100" : "h-0 opacity-0"
+          open ? "h-auto sm:h-14 opacity-100" : "h-0 opacity-0"
         }`}
       >
         <span className="font-semibold text-secondary pl-1">
