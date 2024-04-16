@@ -38,16 +38,16 @@ export default function Project({ project }: Props) {
       </div>
       <div
         className={`pl-3 overflow-hidden animation duration-300 flex flex-col ${
-          open ? "h-auto sm:h-14 opacity-100" : "h-0 opacity-0"
+          open ? "h-auto sm:h-16 opacity-100" : "h-0 opacity-0"
         }`}
       >
-        <span className="font-bold text-secondary pl-1">
+        <span className="font-semibold text-secondary pl-1">
           {project.language}
         </span>
-        <div className="pt-1 font-extralight text-primary/90 text-sm flex flex-row gap-2 flex-wrap">
+        <div className="py-1 font-extralight text-primary/90 text-sm flex flex-row gap-2 flex-wrap">
           {project.tools.map((tool, index) => (
             <span
-              className="bg-secondary/20 rounded-full px-2 py-0.5"
+              className="bg-secondary/20 text-xs rounded-full px-2 py-0.5 font-semibold"
               key={index}
             >
               {tool}
