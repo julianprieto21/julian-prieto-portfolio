@@ -25,7 +25,7 @@ export default function Project({ project }: Props) {
       <div className="flex justify-between items-center">
         <a href={project.href} target="_blank" rel="noopener noreferrer">
           <h2
-            className={`font-semibold hover:underline transition-all ${
+            className={`font-semibold hover:underline transition-all duration-300 ${
               open ? "text-3xl" : "text-2xl"
             }`}
           >
