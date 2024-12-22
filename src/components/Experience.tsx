@@ -63,21 +63,21 @@ function TimeLine(props: {
     <div
       // style={{ height: open ? 40 * trajectoryLength + 90 : 0 }}
       className={`${
-        open ? "opacity-100 h-auto sm:h-48" : "opacity-0 h-0"
+        open ? "opacity-100 h-auto sm:h-60" : "opacity-0 h-0"
       } w-full transition-all duration-300 overflow-hidden ml-3 my-2 sm:mb-0`}
     >
       <p className="font-semibold text-secondary text-sm w-5/6 animation pb-4">
         {props.comment}
       </p>
       <div className="flex flex-row relative">
-        <span className="border-l border-dashed border-primary absolute h-full left-[77px]"></span>
+        <span className="border-l border-dashed border-primary absolute h-full left-[78px]"></span>
         <ul className="w-full flex flex-col justify-between h-full">
           {props.trajectory.map((trajectory, index) => (
             <li
               key={index}
               className="flex flex-row justify-start gap-2 items-center text-secondary h-[40px]"
             >
-              <span>{trajectory.start}</span>
+              <span className="w-16">{trajectory.start}</span>
               <span className="w-3 h-3 rounded-full bg-primary" />
               <span className="font-bold text-lg">{trajectory.position}</span>
             </li>
